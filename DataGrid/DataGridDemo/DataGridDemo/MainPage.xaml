@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DataGridDemo"
+             xmlns:sfgrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+             xmlns:sfPager="clr-namespace:Syncfusion.SfDataGrid.XForms.DataPager;assembly=Syncfusion.SfDataGrid.XForms"
+             x:Class="DataGridDemo.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:ViewModel />
+    </ContentPage.BindingContext>
+    <Grid>
+        <sfgrid:SfDataGrid x:Name="dataGrid" RowHeight="70"
+            AllowGroupExpandCollapse="True" 
+            AllowResizingColumn="True" 
+            AllowSorting="True" 
+            AutoGenerateColumns="True" 
+            ItemsSource="{Binding OrdersInfo}">
+        </sfgrid:SfDataGrid>
+    </Grid>
+</ContentPage>
